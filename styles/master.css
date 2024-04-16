@@ -1,0 +1,122 @@
+body {
+	background-image: url(../images/block_icons/andesite.png);
+}
+
+main {
+	background: #FFF;
+	padding: 10px;
+	outline: 1px solid #000;
+}
+
+* {
+	font-family: "Calibri", "Arial", sans-serif;
+}
+
+img.in_table_screenshot {
+	width: 200px;
+}
+
+td {
+	border: 1px solid #000;
+}
+
+img.block_icon {
+	width: 16px;
+	float: left;
+}
+
+nav, footer {
+	width: 100%;
+	background: #050;
+	color: #FFF;
+}
+
+.table_of_contents {
+	outline: 1px solid #000;
+}
+
+.table_of_contents p {
+	padding-left: 5px;
+}
+
+a.section_level_2 {
+	padding-left: 5px;
+}
+
+a.section_level_3 {
+	padding-left: 55px;
+}
+
+div.menu_potentially_dropdown a {
+	text-decoration: none;
+	color: inherit;
+}
+
+div.menu_potentially_dropdown a:hover, div.menu_potentially_dropdown a:active {
+	text-decoration: none;
+	background: #070;
+	color: inherit;
+}
+
+	
+div.menu_potentially_dropdown a#current_page {
+	text-decoration: underline;
+	background: #070;
+}
+
+/* 1000px is approximately the width of the nav when expanded */
+@media screen and (max-width: 800px) {
+	div.menu_potentially_dropdown {
+		width: 100%;
+		padding: 0 4px 0 4px;
+		pointer-events: auto;
+		position: absolute;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: visibility 1s;
+		color: #FFF;
+		background: #050;
+	}
+	
+	nav:before {
+		content: "\2630 \a0 Menu";
+		text-align: center;
+	}
+	
+	nav:hover {
+		background: #070;
+	}
+	
+	nav:focus {
+		background: #070;
+		pointer-events: none;
+	}
+	
+	div.menu_potentially_dropdown a {
+		display: block;
+		text-align: center;
+		padding: 5px;
+		white-space: nowrap;
+	}
+	
+	nav:focus .menu_potentially_dropdown {
+		opacity: 1;
+		visibility:visible;
+	}
+	
+}
+
+@media screen and (min-width: 801px) {
+	div.menu_potentially_dropdown a {
+		display: inline-block;
+		height: 25px;
+		padding: 5px;
+		white-space: nowrap;
+	}
+}
+
+@media print {
+	a { text-decoration: none; color: inherit; }
+	nav { display: none; }
+}

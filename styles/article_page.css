@@ -1,0 +1,44 @@
+.odd img {
+	float: right;
+	padding-left: 10px;
+	width: 300px;
+}
+
+.even img {
+	float: left;
+	padding-right: 10px;
+	width: 300px;
+}
+
+img.fullwidth {
+	width: 100%;
+	float: none;
+	display: block;
+	margin: auto;
+	padding: 0 0 0 0;
+	outline: 1px solid #000;
+}
+
+/* Clearfix */
+section::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+img.block_icon {
+	float: none;
+	width: 16px;
+	padding: 0 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+	.odd img {float: none; display: block; margin: auto; padding: 0 0 0 0;}
+	.even img {float: none; display: block; margin: auto; padding: 0 0 0 0;}
+	section {padding: 0 0 0 0;}
+}
+
+@media screen and (min-width: 1101px) {
+	.odd p, .odd h2, .odd h3, .odd table { padding-right: 310px; }
+	.even p, .even h2, .even h3, .even table { padding-left: 310px; }
+}

@@ -1,0 +1,32 @@
+.link_block {
+	width: 200px;
+	border: 1px solid #000;
+	border-radius: 2px;
+	font-size: 20;
+	vertical-align: center;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.link_block p {
+	text-align: center;
+	vertical-align: center;
+}
+
+.link_block img {
+	height: 50px;
+	float: left;
+	vertical-align: center;
+}
+
+@media screen and (max-width: 800px) {
+	.link_block { display: block; }
+}
+
+@media screen and (min-width: 801px) {
+	.link_block { display: inline-block; }
+}
+
+@media print {
+	.link_block { display: none; }
+}
